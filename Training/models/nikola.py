@@ -1,6 +1,5 @@
 import torch.nn as nn
 
-
 class nikola(nn.Module):
   def __init__(self):
     # calls constructor of parent class to properly set everything up
@@ -23,13 +22,13 @@ class nikola(nn.Module):
     )
 
     self.dense_layers = nn.Sequential(
-      nn.Linear(in_features=3840, out_features=100),
+      nn.Linear(in_features=8064, out_features=100),
       nn.ReLU(),
       nn.Linear(in_features=100, out_features=50),
       nn.ReLU(),
       nn.Linear(in_features=50, out_features=10),
       nn.ReLU(),
-      nn.Linear(in_features=10, out_features=2)
+      nn.Linear(in_features=10, out_features=4)
     )
 
   def forward(self, x):
